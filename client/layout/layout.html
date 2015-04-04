@@ -1,0 +1,28 @@
+<template name="layout">
+	<div class="hero-unit">
+		<h1>Dota 2 Matches</h1>
+	</div>
+	<div class="page-header">
+		<table class="table table-striped">
+    	<thead>
+        	<tr>
+            	<th>League</th>
+              	<th>Team 1</th>
+              	<th>Team 2</th>
+              	<th>When?</th>
+            </tr>
+        </thead>
+
+        <tbody>
+        	{{#each games}}
+          	<tr>
+          		<td>{{league.name}}</td>
+          		<td>{{team1.team_tag}}</td>
+        		<td>{{team2.team_tag}}</td>
+        		<td>{{timediffHumanized}}</td>
+          	</tr>
+          	{{/each}}
+        </tbody>
+      </table>
+	</div>
+</template>
